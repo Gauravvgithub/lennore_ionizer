@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect www to non-www (force HTTPS as well)
+  RewriteCond %{HTTP_HOST} ^www\.lennore\.in$ [NC]
+  RewriteRule ^(.*)$ https://lennore.in/$1 [R=301,L]
+
+  # Allow index.php directly
+  RewriteRule ^index\.php$ - [L]
+
+  # If request is NOT a file
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # If request is NOT a directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Return 404 for unknown URLs instead of rewriting to index.php
+  RewriteRule ^.*$ - [R=404,L]
+</IfModule>

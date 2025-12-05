@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <!-- <title>Lennore | Water Purifier Machine Company</title>  -->
+    <title>LENNORE IONIZER</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+    <!-- Font-Awesome (CSS) -->
+    <link rel="stylesheet" href="./assets/vendors/font-awesome/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/vendors/magnific-popup/magnific-popup.css">
+
+    <!-- Swiper (CSS) -->
+    <!-- <link rel="stylesheet" href="../assets/vendors/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="./assets/vendors/swiper/swiper-bundle.min.css">
+
+    <!-- Include CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
+
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+<style>
+    /* Limit the image height and ensure proper sizing */
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        /* Controls thumbnail height */
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide {
+        padding: 5px;
+        /* Optional spacing */
+        box-sizing: border-box;
+    }
+</style>
+
+<style>
+    /* Contact Information Styles */
+    .info.connect {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .clickable-contact a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .clickable-contact a:hover {
+        color: #2a7d2e;
+        /* Lennore brand green */
+    }
+
+    .contact-icon {
+        color: #f5f5f5 !important;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .clickable-contact:hover .contact-icon {
+        color: #2a7d2e;
+        transform: scale(1.1);
+    }
+
+    /* Remove default link styling */
+    .clickable-contact a,
+    .clickable-contact a:hover,
+    .clickable-contact a:visited {
+        color: inherit;
+    }
+
+
+
+    /* FAQ Section Styles */
+    .faq-section {
+        max-width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .faq-heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .faq-heading h2 {
+        color: rgba(39, 137, 103, 0.908);
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .faq-heading p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    .faq-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+        background: #f9f9f9;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .faq-question:hover {
+        background: rgba(39, 137, 103, 0.908);
+        color: #fff;
+    }
+
+    .faq-question i {
+        transition: transform 0.3s ease;
+    }
+
+    .faq-question.active i {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, padding 0.3s ease;
+        background: #fff;
+        font-size: 16px;
+    }
+
+    .faq-question.active+.faq-answer {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        max-height: 1000px;
+        /* Increased to accommodate long answers */
+    }
+
+    .faq-answer p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Animation to scroll to the question when opened */
+    @keyframes smoothScroll {
+        0% {
+            scroll-margin-top: 0;
+        }
+
+        100% {
+            scroll-margin-top: 20px;
+        }
+    }
+
+    .faq-item.active-item {
+        scroll-margin-top: 20px;
+        animation: smoothScroll 0.5s forwards;
+    }
+
+    @media (max-width: 768px) {
+        .faq-question {
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .faq-heading h2 {
+            font-size: 28px;
+        }
+    }
+</style>
+
+<style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .gallery a {
+        flex: 1 1 calc(33.333% - 20px);
+        box-sizing: border-box;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-thumb {
+        position: relative;
+        display: inline-block;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play-button::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 24px solid #fff;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+    }
+
+    .video-thumb img {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <!-- ==================== Scroll-Top Area (Start) ==================== -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-long-arrow-alt-up"></i>
+    </a>
+    <!-- ==================== Scroll-Top Area (End) ==================== -->
+
+
+
+    <!-- ==================== Header Area (Start) ==================== -->
+    <header>
+
+        <!-- ===== Header Area (Start) ===== -->
+        <div class="header">
+
+            <div class="header-1">
+
+                <!-- == Contacts == -->
+                <ul class="header-contacts">
+                    <li class="clickable-contact">
+                        <a href="tel:+919810337293">
+                            <i class="fas fa-phone lennore-header-contact" style="color:whitesmoke"></i>
+                            <span style="color:whitesmoke">+91 98103 37293</span>
+                        </a>
+                    </li>
+                    <li class="clickable-contact">
+                        <a href="mailto:info@lennore.in">
+                            <i class="fas fa-envelope lennore-header-contact" style="color:whitesmoke"></i>
+                            <span class="gmail" style="color:whitesmoke">info@lennore.in</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- == Social == -->
+                <ul class="social-contacts">
+                    <li><a href="https://www.facebook.com/profile.php?id=61558773770869" target="_blank"
+                            class="fab fa-facebook-f"></a></li>
+                    <li><a href="https://www.youtube.com/@LennoreIONIZER" target="_blank" class="fab fa-youtube"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/lennoreofficial/" target="_blank"
+                            class="fab fa-instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/company/106217416/admin/dashboard/" target="_blank"
+                            class="fab fa-linkedin"></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=919810337293" target="_blank"
+                            class="fab fa-whatsapp"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="header-2">
+
+                <div id="menu-btn" class="icon fa-solid fa-bars-staggered"></div>
+
+                <!-- == Logo == -->
+                <a class="logo" href="./index.html">
+                    <img src="./assets/img/logo.png" alt="logo">
+
+                </a>
+
+                <div class="container">
+
+                    <!-- == Navbar == -->
+                    <nav class="navbar">
+
+                        <a class="nav-btn" href="./index.html">home</a>
+
+                        <div class="dropdown-menu">
+                            <button class="nav-btn"><a href="./about.html" style="color: whitesmoke;">about
+                                    us</a></button>
+
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <button class="nav-btn"><a href="./gallery.html"
+                                    style="color: whitesmoke;">Gallery</a></button>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <button class="nav-btn"><a href="./services.html"
+                                    style="color: whitesmoke;">Services</a></button>
+
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <button class="nav-btn"><a href="./products.html"
+                                    style="color: whitesmoke;">products</a></button>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <button class="nav-btn"><a href="./contact.html" style="color: whitesmoke;">contact
+                                </a></button>
+                        </div>
+
+                </div>
+
+
+                </nav>
+
+
+                <!-- == Mobile Menu Area (Start) == -->
+                <div class="mobile-menu">
+
+                    <nav class="mobile-navbar">
+
+                        <div class="nav-link">
+                            <div class="main-nav-link"> <a class="nav-btn" href="./index.html">home</a> </div>
+                        </div>
+
+                        <div class="nav-link">
+                            <div class="main-nav-link">
+                                <div class="nav-btn"><a href="./about.html">about us</a>
+                                </div>
+
+                            </div>
+
+
+                            <div class="nav-link">
+                                <div class="main-nav-link">
+                                    <div class="nav-btn"><a href="./services.html">Services</a></div>
+                                </div>
+
+                                <div class="nav-link">
+                                    <div class="main-nav-link">
+                                        <div class="nav-btn"><a href="./products.html">products</a></div>
+                                    </div>
+
+
+                                    <!-- <div class="nav-link">
+              <div class="main-nav-link"> <div class="nav-btn"> <a href="./blog.html">blogs</a></div>
+          
+            </div>  -->
+
+                                    <div class="nav-link">
+                                        <div class="main-nav-link"> <a class="nav-btn" href="./contact.html">contact</a>
+                                        </div>
+                                    </div>
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ===== Header Area (Ends) ===== -->
+
+    </header>
+    <!-- ==================== Header Area (End) ==================== -->
+
+    <style>
+      .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery a {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    max-width: calc(33.333% - 20px);
+}
+
+@media (max-width: 1024px) {
+    .gallery a {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery a {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .gallery {
+        gap: 8px;
+    }
+    .gallery img {
+        border-radius: 6px;
+    }
+    .play-button {
+        width: 40px;
+        height: 40px;
+    }
+    .play-button::before {
+        border-left: 16px solid #fff;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+}
+    </style>
+
+
+
+    <!-- ==================== Home-Slider Area (Start) ==================== -->
+    <section class="container" style="margin-top:120px">
+        <div id="lightgallery" class="gallery">
+            <!-- Image 1 -->
+            <!-- Image 1 -->
+            <a href="assets/images/LImages/1.jpg">
+                <img src="assets/images/LImages/1.jpg" width="600" height="200" alt="Gallery Photo 1" />
+            </a>
+            <!-- Image 2 -->
+            <a href="assets/images/LImages/2.jpg">
+                <img src="assets/images/LImages/2.jpg" width="600" height="200" alt="Gallery Photo 2" />
+            </a>
+            <!-- Image 3 -->
+            <a href="assets/images/LImages/3.jpg">
+                <img src="assets/images/LImages/3.jpg" width="600" height="200" alt="Gallery Photo 3" />
+            </a>
+            <!-- Image 4 -->
+            <a href="assets/images/LImages/4.jpg">
+                <img src="assets/images/LImages/4.jpg" width="600" height="200" alt="Gallery Photo 4" />
+            </a>
+            <!-- Image 5 -->
+            <a href="assets/images/LImages/5.jpg">
+                <img src="assets/images/LImages/5.jpg" width="600" height="200" alt="Gallery Photo 5" />
+            </a>
+            <!-- Image 6 -->
+            <a href="assets/images/Creatives with New Logo/Drink wisely and lead a healthy life.jpg">
+                <img src="assets/images/Creatives with New Logo/Drink wisely and lead a healthy life.jpg" width="600" height="200" alt="Gallery Photo 6" />
+            </a>
+            <!-- Image 7 -->
+            <a href="assets/images/Creatives with New Logo/Enjoy clean, healthful and revitalizing water.jpg">
+                <img src="assets/images/Creatives with New Logo/Enjoy clean, healthful and revitalizing water.jpg" width="600" height="200" alt="Gallery Photo 7" />
+            </a>
+            <!-- Image 8 -->
+            <a href="assets/images/Creatives with New Logo/Experience Faster Hydration.jpg">
+                <img src="assets/images/Creatives with New Logo//Experience Faster Hydration.jpg" width="600" height="200" alt="Gallery Photo 8" />
+            </a>
+            <a href="assets/images/Creatives with New Logo/Life requires Water.jpg">
+                <img src="assets/images/Creatives with New Logo/Life requires Water.jpg" width="600" height="200" alt="Gallery Photo 8" />
+            </a>
+            <a href="assets/images/Creatives with New Logo/What is Alkaline Water Ionizer.jpg">
+                <img src="assets/images/Creatives with New Logo/What is Alkaline Water Ionizer.jpg" width="600" height="200" alt="Gallery Photo 8" />
+            </a>
+            <a href="assets/images/Creatives with New Logo/Your Water, Now Smarter.jpg">
+                <img src="assets/images/Creatives with New Logo/Your Water, Now Smarter.jpg" width="600" height="200" alt="Gallery Photo 8" />
+            </a>
+
+            <!-- Video 1 -->
+
+
+
+             
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/dontlet.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/dont-let-the-size-fool-you.png" alt="Gallery Video Thumbnail" />
+                <div class="play-button"></div>
+            </a>
+            <!-- Video 2 -->
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/haldi-experiment.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/haldi-experiment.png" width="600" height="200" alt="Gallery Video 2" />
+                <div class="play-button"></div>
+            </a>
+            <!-- Video 3 -->
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/installation-video.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/installation-video.png" width="600" height="200" alt="Gallery Video 3" />
+                <div class="play-button"></div>
+            </a>
+            <!-- Video 4 -->
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/Lennore L9.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/LennoreL9.png" width="600" height="200" alt="Gallery Video 4" />
+                <div class="play-button"></div>
+            </a>
+            <!-- Video 5 -->
+            
+            <!-- Video 6 -->
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/ph-drop-experiment.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/ph-drop-experiment.png" width="600" height="200" alt="Gallery Video 6" />
+                <div class="play-button"></div>
+            </a>
+            <!-- Video 7 -->
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/videos/gallery/want-it-all.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/videos/gallery/want-it-all.png" width="600" height="200" alt="Gallery Video 7" />
+                <div class="play-button"></div>
+            </a>
+            <a
+                data-lg-size="1280-720"
+                data-video='{"source": [{"src":"assets/images/LImages/installation.mp4","type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+                class="video-thumb"
+            >
+                <img src="assets/images/LImages/7.jpg" width="600" height="200" alt="Gallery Video 7" />
+                <div class="play-button"></div>
+            </a>
+        </div>
+    </section>
+
+    
+
+
+
+
+    <!-- whats app -->
+    <div class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=919810337293" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- <div class="whatsapp-text">Chat with us</div> -->
+    </div>
+    <!-- whatsapp end  -->
+
+
+
+
+
+    <!-- ==================== Footer Area (Start) ==================== -->
+    <footer class="footer">
+
+        <div class="box-container">
+
+            <div class="footer-item">
+                <!-- Logo -->
+                <a class="logo" href="./index.html">
+                    <img src="./assets/img/logo.png" alt="logo">
+
+                </a>
+                <p>We provide our customers with safe and clean drinking water, delivered right to their doorstep with
+                    the utmost convenience. We offer a range of options to suit your preferences and budget.</p>
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=61558773770869" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/106217416/admin/dashboard/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@LennoreIONIZER" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/lennoreofficial/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-heading">
+                    <h2>our services</h2>
+                    <img src="../assets/images/Heading/heading.html" alt="">
+                </div>
+                <div class="info links">
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a
+                            href="./about.html">about</a></p>
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a
+                            href="./services.html">services</a></p>
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a
+                            href="./products.html">products</a></p>
+                    <!-- <p><i class="fa-solid fa-caret-right"></i><a href="./shop.html">shop</a></p> -->
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a href="./blog.html">blogs</a>
+                    </p>
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a
+                            href="./contact.html">contact</a></p>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-heading">
+                    <h2>useful links</h2>
+                    <img src="./assets/images/Heading/heading.html" alt="">
+                </div>
+                <div class="info links">
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a href="./L5.html">L5</a></p>
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a href="./L5+ro.html">L5 +
+                            RO</a></p>
+                              <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a href="./L7+ro.html">L7 +
+                            RO</a></p>
+                    <p><i class="fa-solid fa-caret-right" style="color: whitesmoke;"></i><a href="./L9.html">L9</a></p>
+                    <!-- <p><i class="fa-solid fa-caret-right"></i><a href="./contact.html">contact</a></p> -->
+                </div>
+            </div>
+
+
+            <div class='footer-item'>
+                <div class="footer-heading"> style="color: whitesmoke;"
+                    <h2>contact info</h2>
+                    <img src="./assets/images/Heading/heading.html" alt="">
+                </div>
+                <div class="info connect">
+                    <p class="clickable-contact">
+                        <a href="tel:+919810337293">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span>+91 98103 37293</span>
+                        </a>
+                    </p>
+                    <p class="clickable-contact">
+                        <a href="mailto:info@lennore.in">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span class="gmail">info@lennore.in</span>
+                        </a>
+                    </p>
+                    <p class="clickable-contact">
+                        <a href="https://maps.google.com/?q=Apex Square, Plot No : 11, Pocket B3, Sector - 17, Dwarka, New Delhi - 110075"
+                            target="_blank">
+                            <i class="fas fa-map contact-icon"></i>
+                            <span>Apex Square, Plot No : 11, Pocket B3, Sector - 17, Dwarka, New Delhi - 110075</span>
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-clock contact-icon"></i>
+                        <span>Mon - Sat (10AM - 7PM)</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <p>&copy;<span>Lennore</span> | all rights reserved</p>
+        </div>
+
+    </footer>
+    <!-- ==================== Footer Area (End) ==================== -->
+
+
+
+    <!-- ==================== Loader Area (End) ==================== -->
+    <div class="pre-loader">
+        <div id="loader">
+            <img src="./assets/images/Logo/Logo.png" alt="">
+        </div>
+    </div>
+    <!-- ==================== Loader Area (End) ==================== -->
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script src="./assets/vendors/jquery/jquery.min.js"></script>
+
+    <!-- Magnific-Popup JS -->
+    <script src="./assets/vendors/magnific-popup/jquery.magnific-popup.html"></script>
+
+    <!-- Swiper (JS) -->
+    <script src="./assets/vendors/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom Script Files -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/nav-link-toggler.js"></script>
+    <script src="./assets/js/home-slider.js"></script>
+    <script src="./assets/js/counter-up.js"></script>
+    <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/testi-slider.js"></script>
+    <script src="./assets/js/sponsor-slider.js"></script>
+
+    <!-- Initialize Gallery -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('lightgallery'), {
+                plugins: [lgVideo],
+                videojs: true,
+                speed: 500,
+            });
+        });
+    </script>
+
+
+
+</html>
